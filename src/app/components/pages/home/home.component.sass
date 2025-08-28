@@ -1,0 +1,102 @@
+ul
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    list-style-type: none
+    padding: 0
+
+li a
+    height: 22.5rem
+    width: 20rem
+    border: 1px solid whitesmoke
+    margin: 0.5rem
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    color: #e72929
+    position: relative
+
+    &:hover
+        opacity: 0.9
+        cursor: pointer
+
+    img
+        object-fit: cover
+        height: 14.5rem
+        width: 100%
+
+    .content
+        margin-top: 0.3rem
+        padding: 0.5rem 1rem
+        position: relative
+        flex: 1
+        display: flex
+        flex-direction: column
+
+        .name
+            font-size: 1.2rem
+            font-weight: 600
+            margin-bottom: 0.3rem
+
+        .favourite
+            position: absolute
+            top: 0.5rem
+            right: 1rem
+            font-size: 1.2rem
+
+        .favourite.not
+            color: #42404288
+
+        .stars
+            margin-bottom: 0.2rem
+
+            :host ::ng-deep .p-rating
+                .p-rating-item
+                    .p-rating-icon
+                        color: white
+                        font-size: 22px
+                        text-shadow: 0 0 1px #ccc
+                .p-rating-item.p-rating-item-active
+                    .p-rating-icon
+                        color: gold
+
+            p
+                margin: 0
+                font-size: 0.9rem
+                color: #333
+
+        .product-item-footer
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            margin-top: 0.3rem
+
+            .orgins
+                flex: 9
+                display: flex
+                flex-wrap: wrap
+
+                span
+                    border-radius: 2rem
+                    background-color: whitesmoke
+                    display: inline-block
+                    font-size: 0.8rem
+                    color: #4f4b4d88
+                    margin-right: 0.3rem
+                    margin-top: 0.2rem
+                    padding: 0 0.5rem
+
+            .cook-time
+                font-size: 0.9rem
+                flex: 3
+                text-align: right
+
+        .price
+            position: absolute
+            bottom: 0.5rem
+            left: 0.9rem
+            background: #fff
+            padding: 0.3rem 0.5rem
+            color: #414141
+            font-size: 1.1rem

@@ -6,12 +6,34 @@
             <div class="name">
                 {{food.name}}
             </div>
-            <span class="favourite{{food.favourite?'':'not'}}">
-                ❤️
-            </span>
-            <div class ="stars">
-                
-            </div>
+           <span class="favourite" [ngClass]="{'not': !food.favourite}">❤️</span>
+
+            <div class="stars">
+                <p-rating 
+                    [(ngModel)]="food.stars" 
+                    [readonly]="true" 
+                    [stars]="5">
+               </p-rating>
+               </div>
+               <div class="product-item-footer">
+                <div class="orgins">
+                    <span *ngFor="let orgin of food.orgins">
+                        {{orgin}}
+                    </span>
+                  </div>
+
+                  <div class="cook-time">
+                    <span>🕗</span>
+                    {{food.cookTime}}
+                  </div>
+               </div>
+              <div class="price">
+                <span>
+                    {{food.price | currency}}
+                </span>
+              </div>
+        
+
          </div>
 
         </a>

@@ -18,5 +18,5 @@ export class HomeComponent implements OnInit {
     
   }
 
-
+ food= {stars:4.5}
 }
