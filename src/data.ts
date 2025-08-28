@@ -1,5 +1,5 @@
 import { Food } from "./app/shared/models/food";
-
+import { tag } from "./app/shared/models/tag";
 
 export const sample_foods: Food[] = [
   {
@@ -51,7 +51,7 @@ export const sample_foods: Food[] = [
     id: '5',
     name: 'Chocolate Lava Cake',
     price: 7,
-    tags: ['Dessert', 'Sweet', 'Chocolate'],
+    tags: ['Desserts', 'Sweet', 'Chocolate'],
     favourite: true,
     stars: 4.9,
     imageUrl: './assets/chocolate-lava-cake.jpg',
@@ -60,3 +60,12 @@ export const sample_foods: Food[] = [
   }
 ];
 
+export const sample_tags:tag[]=[
+    { name: "All", count: 5 },
+  { name: "Italian", count: 2 },
+  { name: "Indian", count: 1 },
+  { name: "Japanese", count: 1},
+  { name: "Desserts", count: 1 },
+  { name: "Vegetarian", count: 1 },
+  { name: "Seafood", count: 1 },
+]
