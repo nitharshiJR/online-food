@@ -1,1 +1,43 @@
-<p>food-page works!</p>
+<div class="container">
+    <img [src]="food.imageUrl" [alt]="food.name"/>
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{food.name}}
+            </span>
+            <span class="favourite{{food.favourite?'':'not'}}">❤️</span>
+        </div>
+         <div class="stars">
+                <p-rating 
+                    [(ngModel)]="food.stars" 
+                    [readonly]="true" 
+                    [stars]="5">
+               </p-rating>
+               </div>
+
+            <div class="orgins">
+                <span *ngFor="let orgin of food.orgins">
+                    {{orgin}}
+                </span>
+            </div>
+            <div class="tags">
+                <a *ngFor="let tag of food.tags" routerLink="/tag/{{tag}}">
+                   {{tag}}  
+                </a>
+            </div>
+
+            <div class="cook-time">
+                <span>
+                    time to cook about <strong>{{food.cookTime}}</strong>
+                    minutes
+                </span>
+            </div>
+           <div class="price">
+            <span>
+                {{food.price | currency}}
+            </span>
+         </div>
+
+         <button (click)="addToCart()">Add to Cart</button>
+</div>
